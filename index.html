@@ -1,37 +1,213 @@
-<!-- 
-    Name: index.html
-
-    Descriptie: Dit is de file die wordt gebruikt voor de basis van de website 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Martinez Bartolome | Software developing student</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Martinez Bartolome</title>
+    <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
-    <div class="navDiv">
-        <ul>
-            <a href="#">Home</a>
-            <a href="#">Projects</a>
-        </ul>
-    </div>
 
-    <div class="aboutmeDiv">
-        <a href="#">
-            <img src="" alt="About me logo">
-        </a>
+    <!-- ================= NAVIGATION ================= -->
+    <header>
+        <div class="logo">G</div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About me</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="section home">
+        <div class="content">
+            <p class="hello">Hello! I'm</p>
+            <h1>
+                Gabriel <span>Martinez Bartolome</span>
+            </h1>
+            <h3>Software Developer</h3>
+            <p class="description">
+                I build elegant solutions for complex problems with modern technologies.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact">
+                    <button class="primary">Contact me</button>
+                </a>
+                <a href="#projects">
+                    <button class="secondary">Projects</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="home-image">
+            <img src="images/port.png" alt="Illustration" />
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
         <h1>About me</h1>
-        <p class="subText">Ik bouw elegante oplossingen voor complexe problemen met moderne technologieën.</p>
-    </div>
 
-    <div class="mainDiv">
-        <img src="" alt="">
-    </div>
+        <div class="bio">
+            <h3 class="title-with-icon">
+                <img src="images/documentICON.png" alt="document icon">
+                Bio
+            </h3>
+            <p>
+                Software engineering student with a passion for creating innovative solutions.
+                Specializing in full-stack development, I combine technical expertise with
+                creative problem-solving to build user-centric applications.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/educationICON.png" alt="education icon">
+                    Education
+                </h4>
+                <p>MBO Rijnland – Software Developer</p>
+                <small>2025 - Present</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+        <h1>Projects</h1>
+
+        <div class="bio">
+            <h3 class="title-with-icon">
+                <img src="images/documentICON.png" alt="document icon">
+                My Work
+            </h3>
+            <p>Here are a few projects I worked on during my studies.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/computerICON.png" alt="computer icon">
+                    KennisBank
+                </h4>
+                <p>An application intended to help users within the library.</p>
+                <button class="secondary">GitHub</button>
+            </div>
+
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/computerICON.png" alt="computer icon">
+                    Portfolio
+                </h4>
+                <p>Created to tell more about myself and showcase my projects.</p>
+                <button class="secondary">GitHub</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+        <h1>Skills</h1>
+
+        <div class="grid">
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/codeICON.png" alt="code icon">
+                    Programming Languages
+                </h4>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/palleteICON.png" alt="pallete icon">
+                    Design
+                </h4>
+                <div class="tags">
+                    <span>Figma</span>
+                    <span>UI/UX</span>
+                    <span>Wireframing</span>
+                    <span>Blender</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section id="achievements" class="section">
+        <h1>Achievements</h1>
+
+        <div class="grid">
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/trophyICON.png" alt="trophy icon">
+                    1st Place - School Project
+                </h4>
+                <small>2026</small>
+                <p>Developed a website solution for a competitive school project.</p>
+            </div>
+
+            <div class="card">
+                <h4 class="title-with-icon">
+                    <img src="images/trophyICON.png" alt="trophy icon">
+                    1st Place - Programming Challenge
+                </h4>
+                <small>2026</small>
+                <p>Won first place in a competitive programming project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-info">
+                <div>
+                    <h4 class="title-with-icon">
+                        <img src="images/phoneICON.png" alt="phone icon">
+                        Phone
+                    </h4>
+                    <p>+31 6 87861654</p>
+                </div>
+
+                <div>
+                    <h4 class="title-with-icon">
+                        <img src="images/mailICON.png" alt="mail icon">
+                        Email
+                    </h4>
+                    <p>gabrielemail2021@gmail.com</p>
+                </div>
+
+                <div>
+                    <h4 class="title-with-icon">
+                        <img src="images/locationICON.png" alt="location icon">
+                        Location
+                    </h4>
+                    <p>Netherlands, Bodegraven 2411TM</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Gabriel Martinez Bartolome
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

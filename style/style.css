@@ -1,3 +1,321 @@
-/* Name: style.css
+/* ================= GLOBAL ================= */
 
-Descriptie: Dit is de file die wordt gebruikt voor alle styling binnen de website */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #2d3748;
+    scroll-behavior: smooth;
+}
+
+/* ================= NAVIGATION ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 120px;
+    z-index: 1000;
+}
+
+.logo {
+    background: #2f5cff;
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+    padding: 10px 18px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2d3748;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: #2f5cff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #2f5cff;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+    min-height: 100vh;
+    padding: 180px 120px 120px 120px;
+}
+
+.section h1 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.section h1::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #2f5cff;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+}
+
+/* ================= ICON TITLES ================= */
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+.title-with-icon img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.title-with-icon:hover img {
+    transform: scale(1.2);
+}
+
+/* ================= HOME ================= */
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hello {
+    color: #2f5cff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.home h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.home h1 span {
+    color: #2f5cff;
+}
+
+.home h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #4a5568;
+}
+
+.description {
+    font-size: 20px;
+    max-width: 550px;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: #2f5cff;
+    color: white;
+}
+
+.primary:hover {
+    background: #2448d8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(47, 92, 255, 0.3);
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #cbd5e0;
+    color: #2d3748;
+}
+
+.secondary:hover {
+    background: #e2e8f0;
+    transform: translateY(-3px);
+}
+
+/* Floating image */
+.home-image img {
+    width: 420px;
+    max-width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* ================= GRID / CARDS ================= */
+
+.grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 16px;
+    width: 340px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #4a5568;
+}
+
+.card small {
+    color: #718096;
+}
+
+/* ================= TAGS ================= */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background: #edf2ff;
+    color: hwb(227 18% 0%);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    background: rgb(46, 91, 255);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #ffffff;
+    padding: 15px 50px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-info p {
+    color: #4a5568;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #718096;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
